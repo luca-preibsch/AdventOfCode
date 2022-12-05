@@ -1,4 +1,4 @@
-package Day1
+package aoc22.day1
 
 fun main() {
     val elves = linkedSetOf<Int>()
