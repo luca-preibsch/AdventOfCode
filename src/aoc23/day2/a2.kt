@@ -11,9 +11,7 @@ fun main() {
             "blue" to 0
         )
 
-        val (gameHead, gameContent) = game.split(':')
-        val gameNumber = gameHead.split(' ').last().toInt()
-        gameContent.split(';').forEach { round ->
+        game.split(':').last().split(';').forEach { round ->
             round.split(',').forEach {
                 val (count, color) = it.trim(' ').split(' ')
                 maxCubes[color] = max(maxCubes[color]!!, count.toInt())
